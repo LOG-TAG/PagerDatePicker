@@ -12,19 +12,19 @@ android {
         versionName "1.1.0"
     }
 
-    signingConfigs {
-        release {
-            try {
-                storeFile file("rspective.keystore")
-                storePassword KEYSTORE_PASSWORD
-                keyAlias KEY_ALIAS
-                keyPassword KEY_PASSWORD
-            }
-            catch (ex) {
-                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
-            }
-        }
-    }
+  //  signingConfigs {
+       // release {
+      //      try {
+       //         storeFile file("rspective.keystore")
+       //         storePassword KEYSTORE_PASSWORD
+       //         keyAlias KEY_ALIAS
+       //         keyPassword KEY_PASSWORD
+       //     }
+       //     catch (ex) {
+       //         throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+        //    }
+        //}
+   // }
 
     buildTypes {
         release {
