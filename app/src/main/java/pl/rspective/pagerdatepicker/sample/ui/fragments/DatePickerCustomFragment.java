@@ -61,7 +61,7 @@ public class DatePickerCustomFragment extends Fragment {
         CustomDateAdapter dateAdapter = new CustomDateAdapter(start, end, defaultDate);
         dateList.setAdapter(dateAdapter);
 
-        DatePagerFragmentAdapter fragmentAdapter = new DatePagerFragmentAdapter(getFragmentManager(), dateList.getDateAdapter()) {
+        DatePagerFragmentAdapter fragmentAdapter = new DatePagerFragmentAdapter(getChildFragmentManager(), dateList.getDateAdapter()) {
             @Override
             protected Fragment getFragment(int position, long date) {
                 return SimplePageFragment.newInstance(position, date);
